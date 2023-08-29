@@ -1,0 +1,51 @@
+
+
+        Express : Frame work NOde
+    -------------------------------------
+
+    1. create package.json file
+    2. package needed: express, cors, dotenv, mongoose
+    3. create .env file to hold environment variable
+    4. create .gitignore file
+    5. create index.js file 
+        - import dotenv to Loads .env file contents into process.env 
+        - import express and cors
+        - create a server using express
+        - use cors
+        - use json parser in server
+        - setup port number to listen server
+        - run/listen server app
+        - use router in server 
+    6. Database connection
+        - create db folder in server
+        - create connection.js file to define mongodb connectivity
+        - install mongoose: used model data of mongodb
+        - import mongoose in connection.js file
+    7. create Model /collection schema to store data in mongodb
+        - create a model folder, where create a schema.js file to define the structure of the data we are going to store in that mongodb collection
+        - import mongoose to define schema
+        - define schema for the model
+        - Create a model /collection using given schema
+        - export the model
+    8. To Setup path/Routes for the server to resolve client request
+        - create a routes folder, where create a router.js file
+        - import express
+        - using express create an object for Router class
+        - using Router object resolve http request
+        - While resolving http request, forward the http request to controller
+        - export router
+    9. To resolve client request using controller
+        - create a controller foller, inside create usercontroller js file
+        - here define a function where define logic to resolve the client request
+        - here request will resolve while using mongodb model 
+        - finally send response to client 
+    10. Authentication - using jwt token
+        - install jsonwebtoken - npm i jsonwebtoken
+        - generate token: sign(payload,secret-key)
+        - verify token : verify(token,secret-key)
+        - Middlewares:
+            - function name(req,res,next){
+                }
+            - types:
+                - Application specific Middlewares: express.json()
+                - Router specific Middlewares
